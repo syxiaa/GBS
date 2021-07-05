@@ -16,7 +16,7 @@ class GBList:
         for i in range(int((max_purity - min_purity) * 100) + 1):
             purity = i / 100 + min_purity
             self.init_granular_balls(purity, min_sample)
-            self.dict_granular_balls[purity] = self.granular_balls
+            self.dict_granular_balls[purity] = self.granular_balls.copy()
 
     def init_granular_balls(self, purity=1.0, min_sample=1):  # Set the purity threshold to 1.0
         """
